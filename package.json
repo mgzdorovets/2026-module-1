@@ -1,0 +1,8 @@
+{
+  "name": "music-showcase",
+  "private": true,
+  "scripts": {
+    "update-tracks": "node scripts/update-tracks.js",
+    "build": "node scripts/check-build.js"
+  }
+}

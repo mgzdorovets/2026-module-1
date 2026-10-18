@@ -1,0 +1,13 @@
+[
+  {"file":"tracks/student-001-track-01-module-1.mp3","student":"student-001","title":"без названия","duration":"1:38","cover":"assets/music-dna/covers/cover-01.png"},
+  {"file":"tracks/student-002-track-01-module-3.mp3","student":"student-002","title":"Лето","duration":"1:13","cover":"assets/music-dna/covers/cover-02.png"},
+  {"file":"tracks/student-008-track-01-module-5.mp3","student":"student-008","title":"Вайб","duration":"1:39","cover":"assets/music-dna/covers/cover-03.png"},
+  {"file":"tracks/student-009-track-01-module-3.mp3","student":"student-009","title":"Unknown Track","duration":"1:19","cover":"assets/music-dna/covers/cover-04.png"},
+  {"file":"tracks/student-010-track-01-module-3.mp3","student":"student-010","title":"Осколки ночи","duration":"1:43","cover":"assets/music-dna/covers/cover-05.png"},
+  {"file":"tracks/student-011-track-01-module-3.mp3","student":"student-011","title":"Unknown Track","duration":"1:43","cover":"assets/music-dna/covers/cover-06.png"},
+  {"file":"tracks/student-012-track-01-module-3.mp3","student":"student-012","title":"Feeling","duration":"0:56","cover":"assets/music-dna/covers/cover-07.png"},
+  {"file":"tracks/student-015-track-01-module-3.mp3","student":"student-015","title":"Караси с маракасами","duration":"1:23","cover":"assets/music-dna/covers/cover-08.png"},
+  {"file":"tracks/student-019-track-01-module-3.mp3","student":"student-019","title":"Скачка за ветром","duration":"1:17","cover":"assets/music-dna/covers/cover-09.png"},
+  {"file":"tracks/student-023-track-01-module-3.mp3","student":"student-023","title":"Звуки с луны","duration":"1:46","cover":"assets/music-dna/covers/cover-10.png"},
+  {"file":"tracks/student-024-track-01-module-3.mp3","student":"student-024","title":"Star way","duration":"1:13","cover":"assets/music-dna/covers/cover-11.png"}
+]

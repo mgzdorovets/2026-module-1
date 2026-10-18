@@ -1,0 +1,410 @@
+[
+  {
+    "file": "tracks/student-001-track-01-module-1.mp3",
+    "student": "student-001",
+    "module": "Модуль 1",
+    "title": "без названия",
+    "cover": "covers/default.jpeg",
+    "size": "3.9 MB"
+  },
+  {
+    "file": "tracks/student-002-track-01-module-3.mp3",
+    "student": "student-002",
+    "module": "Модуль 3",
+    "title": "Лето",
+    "cover": "covers/default.jpeg",
+    "size": "3.0 MB"
+  },
+  {
+    "file": "tracks/student-003-track-01-module-5.mp3",
+    "student": "student-003",
+    "module": "Модуль 5",
+    "title": "Старинная русская песня",
+    "cover": "covers/student-003-track-01-module-5.jpg",
+    "size": "8.5 MB"
+  },
+  {
+    "file": "tracks/student-004-track-01-module-2.mp3",
+    "student": "student-004",
+    "module": "Модуль 2",
+    "title": "superCoolTrack",
+    "cover": "covers/default.jpeg",
+    "size": "2.7 MB"
+  },
+  {
+    "file": "tracks/student-005-track-01-module-2.mp3",
+    "student": "student-005",
+    "module": "Модуль 2",
+    "title": "7 track",
+    "cover": "covers/default.jpeg",
+    "size": "2.5 MB"
+  },
+  {
+    "file": "tracks/student-006-track-01-module-4.mp3",
+    "student": "student-006",
+    "module": "Модуль 4",
+    "title": "Unknown Track",
+    "cover": "covers/default.jpeg",
+    "size": "3.7 MB"
+  },
+  {
+    "file": "tracks/student-007-track-01-module-2.mp3",
+    "student": "student-007",
+    "module": "Модуль 2",
+    "title": "ChikiPiki",
+    "cover": "covers/default.jpeg",
+    "size": "2.8 MB"
+  },
+  {
+    "file": "tracks/student-008-track-01-module-5.mp3",
+    "student": "student-008",
+    "module": "Модуль 5",
+    "title": "Вайб",
+    "cover": "covers/student-008-track-01-module-5.jpg",
+    "size": "3.9 MB"
+  },
+  {
+    "file": "tracks/student-009-track-01-module-3.mp3",
+    "student": "student-009",
+    "module": "Модуль 3",
+    "title": "Unknown Track",
+    "cover": "covers/default.jpeg",
+    "size": "3.2 MB"
+  },
+  {
+    "file": "tracks/student-010-track-01-module-3.mp3",
+    "student": "student-010",
+    "module": "Модуль 3",
+    "title": "Осколки ночи",
+    "cover": "covers/student-010-track-01-module-3.jpg",
+    "size": "4.1 MB"
+  },
+  {
+    "file": "tracks/student-011-track-01-module-3.mp3",
+    "student": "student-011",
+    "module": "Модуль 3",
+    "title": "Unknown Track",
+    "cover": "covers/default.jpeg",
+    "size": "4.2 MB"
+  },
+  {
+    "file": "tracks/student-012-track-01-module-3.mp3",
+    "student": "student-012",
+    "module": "Модуль 3",
+    "title": "Feeling",
+    "cover": "covers/student-012-track-01-module-3.jpg",
+    "size": "2.3 MB"
+  },
+  {
+    "file": "tracks/student-013-track-01-module-2.mp3",
+    "student": "student-013",
+    "module": "Модуль 2",
+    "title": "dissimilar",
+    "cover": "covers/default.jpeg",
+    "size": "2.7 MB"
+  },
+  {
+    "file": "tracks/student-014-track-01-module-5.mp3",
+    "student": "student-014",
+    "module": "Модуль 5",
+    "title": "Космос",
+    "cover": "covers/student-014-track-01-module-5.jpg",
+    "size": "3.8 MB"
+  },
+  {
+    "file": "tracks/student-015-track-01-module-3.mp3",
+    "student": "student-015",
+    "module": "Модуль 3",
+    "title": "Караси с маракасами",
+    "cover": "covers/student-015-track-01-module-3.jpg",
+    "size": "3.3 MB"
+  },
+  {
+    "file": "tracks/student-016-track-01-module-1.mp3",
+    "student": "student-016",
+    "module": "Модуль 1",
+    "title": "Heart",
+    "cover": "covers/student-016-track-01-module-1.jpg",
+    "size": "1.3 MB"
+  },
+  {
+    "file": "tracks/student-017-track-01-module-4.mp3",
+    "student": "student-017",
+    "module": "Модуль 4",
+    "title": "Крутой проект",
+    "cover": "covers/student-017-track-01-module-4.jpg",
+    "size": "3.6 MB"
+  },
+  {
+    "file": "tracks/student-018-track-01-module-1.mp3",
+    "student": "student-018",
+    "module": "Модуль 1",
+    "title": "Начало пути",
+    "cover": "covers/student-018-track-01-module-1.jpg",
+    "size": "1.3 MB"
+  },
+  {
+    "file": "tracks/student-019-track-01-module-3.mp3",
+    "student": "student-019",
+    "module": "Модуль 3",
+    "title": "Скачка за ветром",
+    "cover": "covers/student-019-track-01-module-3.jpg",
+    "size": "3.1 MB"
+  },
+  {
+    "file": "tracks/student-020-track-01-module-2.mp3",
+    "student": "student-020",
+    "module": "Модуль 2",
+    "title": "immortal",
+    "cover": "covers/default.jpeg",
+    "size": "2.4 MB"
+  },
+  {
+    "file": "tracks/student-021-track-01-module-1.mp3",
+    "student": "student-021",
+    "module": "Модуль 1",
+    "title": "ridd",
+    "cover": "covers/default.jpeg",
+    "size": "1.3 MB"
+  },
+  {
+    "file": "tracks/student-022-track-01-module-5.mp3",
+    "student": "student-022",
+    "module": "Модуль 5",
+    "title": "Космонавты",
+    "cover": "covers/student-022-track-01-module-5.jpg",
+    "size": "5.0 MB"
+  },
+  {
+    "file": "tracks/student-023-track-01-module-3.mp3",
+    "student": "student-023",
+    "module": "Модуль 3",
+    "title": "Звуки с луны",
+    "cover": "covers/student-023-track-01-module-3.jpg",
+    "size": "4.1 MB"
+  },
+  {
+    "file": "tracks/student-024-track-01-module-3.mp3",
+    "student": "student-024",
+    "module": "Модуль 3",
+    "title": "Star way",
+    "cover": "covers/student-024-track-01-module-3.jpg",
+    "size": "3.0 MB"
+  },
+  {
+    "file": "tracks/student-025-track-01-module-1.mp3",
+    "student": "student-025",
+    "module": "Модуль 1",
+    "title": "Компиляция",
+    "cover": "covers/student-025-track-01-module-1.jpg",
+    "size": "1.2 MB"
+  },
+  {
+    "file": "tracks/student-026-track-01-module-3.mp3",
+    "student": "student-026",
+    "module": "Модуль 3",
+    "title": "Unknown Track",
+    "cover": "covers/default.jpeg",
+    "size": "3.4 MB"
+  },
+  {
+    "file": "tracks/student-027-track-01-module-2.mp3",
+    "student": "student-027",
+    "module": "Модуль 2",
+    "title": "CowboY;)",
+    "cover": "covers/default.jpeg",
+    "size": "4.0 MB"
+  },
+  {
+    "file": "tracks/student-028-track-01-module-4.mp3",
+    "student": "student-028",
+    "module": "Модуль 4",
+    "title": "Unknown Track",
+    "cover": "covers/default.jpeg",
+    "size": "3.2 MB"
+  },
+  {
+    "file": "tracks/student-029-track-01-module-1.mp3",
+    "student": "student-029",
+    "module": "Модуль 1",
+    "title": "Бал Лучей",
+    "cover": "covers/student-029-track-01-module-1.jpg",
+    "size": "1.2 MB"
+  },
+  {
+    "file": "tracks/student-030-track-01-module-4.mp3",
+    "student": "student-030",
+    "module": "Модуль 4",
+    "title": "Молния",
+    "cover": "covers/student-030-track-01-module-4.jpg",
+    "size": "2.9 MB"
+  },
+  {
+    "file": "tracks/student-031-track-01-module-4.mp3",
+    "student": "student-031",
+    "module": "Модуль 4",
+    "title": "bnju",
+    "cover": "covers/student-031-track-01-module-4.jpg",
+    "size": "1.0 MB"
+  },
+  {
+    "file": "tracks/student-032-track-01-module-5.mp3",
+    "student": "student-032",
+    "module": "Модуль 5",
+    "title": "Сетка",
+    "cover": "covers/student-032-track-01-module-5.jpg",
+    "size": "3.4 MB"
+  },
+  {
+    "file": "tracks/student-032-track-02-module-5.mp3",
+    "student": "student-032",
+    "module": "Модуль 5",
+    "title": "Цикл",
+    "cover": "covers/student-032-track-02-module-5.jpg",
+    "size": "3.7 MB"
+  },
+  {
+    "file": "tracks/student-033-track-01-module-2.mp3",
+    "student": "student-033",
+    "module": "Модуль 2",
+    "title": "9 12 124",
+    "cover": "covers/default.jpeg",
+    "size": "3.4 MB"
+  },
+  {
+    "file": "tracks/student-034-track-01-module-4.mp3",
+    "student": "student-034",
+    "module": "Модуль 4",
+    "title": "итог",
+    "cover": "covers/student-034-track-01-module-4.jpg",
+    "size": "1.3 MB"
+  },
+  {
+    "file": "tracks/student-035-track-01-module-2.mp3",
+    "student": "student-035",
+    "module": "Модуль 2",
+    "title": "kick hihat and bass",
+    "cover": "covers/default.jpeg",
+    "size": "2.0 MB"
+  },
+  {
+    "file": "tracks/student-036-track-01-module-5.mp3",
+    "student": "student-036",
+    "module": "Модуль 5",
+    "title": "Андрей Миронов",
+    "cover": "covers/student-036-track-01-module-5.jpg",
+    "size": "3.4 MB"
+  },
+  {
+    "file": "tracks/student-036-track-02-module-5.mp3",
+    "student": "student-036",
+    "module": "Модуль 5",
+    "title": "Леонид Филатов",
+    "cover": "covers/student-036-track-02-module-5.jpg",
+    "size": "2.4 MB"
+  },
+  {
+    "file": "tracks/student-036-track-03-module-5.mp3",
+    "student": "student-036",
+    "module": "Модуль 5",
+    "title": "Марш роботов",
+    "cover": "covers/student-036-track-03-module-5.jpg",
+    "size": "2.8 MB"
+  },
+  {
+    "file": "tracks/student-036-track-04-module-5.mp3",
+    "student": "student-036",
+    "module": "Модуль 5",
+    "title": "Таганка",
+    "cover": "covers/student-036-track-04-module-5.jpg",
+    "size": "2.0 MB"
+  },
+  {
+    "file": "tracks/student-036-track-05-module-5.mp3",
+    "student": "student-036",
+    "module": "Модуль 5",
+    "title": "Уран",
+    "cover": "covers/student-036-track-05-module-5.jpg",
+    "size": "3.4 MB"
+  },
+  {
+    "file": "tracks/student-037-track-01-module-4.mp3",
+    "student": "student-037",
+    "module": "Модуль 4",
+    "title": "Мелодия",
+    "cover": "covers/default.jpeg",
+    "size": "2.6 MB"
+  },
+  {
+    "file": "tracks/student-038-track-01-module-2.mp3",
+    "student": "student-038",
+    "module": "Модуль 2",
+    "title": "KANESO",
+    "cover": "covers/default.jpeg",
+    "size": "2.6 MB"
+  },
+  {
+    "file": "tracks/student-039-track-01-module-4.mp3",
+    "student": "student-039",
+    "module": "Модуль 4",
+    "title": "DrEaM Pulse",
+    "cover": "covers/student-039-track-01-module-4.jpg",
+    "size": "3.5 MB"
+  },
+  {
+    "file": "tracks/student-040-track-01-module-4.mp3",
+    "student": "student-040",
+    "module": "Модуль 4",
+    "title": "Драманд бэйс",
+    "cover": "covers/student-040-track-01-module-4.jpg",
+    "size": "5.0 MB"
+  },
+  {
+    "file": "tracks/student-041-track-01-module-2.mp3",
+    "student": "student-041",
+    "module": "Модуль 2",
+    "title": "hddddd",
+    "cover": "covers/default.jpeg",
+    "size": "2.1 MB"
+  },
+  {
+    "file": "tracks/student-042-track-01-module-1.mp3",
+    "student": "student-042",
+    "module": "Модуль 1",
+    "title": "demyan100",
+    "cover": "covers/default.jpeg",
+    "size": "6.1 MB"
+  },
+  {
+    "file": "tracks/student-043-track-01-module-2.mp3",
+    "student": "student-043",
+    "module": "Модуль 2",
+    "title": "129",
+    "cover": "covers/default.jpeg",
+    "size": "2.0 MB"
+  },
+  {
+    "file": "tracks/student-044-track-01-module-1.mp3",
+    "student": "student-044",
+    "module": "Модуль 1",
+    "title": "Аберрация",
+    "cover": "covers/student-044-track-01-module-1.jpeg",
+    "size": "1.2 MB"
+  },
+  {
+    "file": "tracks/student-045-track-01-module-1.mp3",
+    "student": "student-045",
+    "module": "Модуль 1",
+    "title": "thedarkness",
+    "cover": "covers/student-045-track-01-module-1.jpeg",
+    "size": "1.4 MB"
+  },
+  {
+    "file": "tracks/student-046-track-01-module-2.mp3",
+    "student": "student-046",
+    "module": "Модуль 2",
+    "title": "GazpromSila",
+    "cover": "covers/default.jpeg",
+    "size": "3.0 MB"
+  }
+]
