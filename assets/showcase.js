@@ -147,7 +147,7 @@ if ('mediaSession' in navigator) {
 
 async function init() {
   try {
-    const response = await fetch('collection.json');
+    const response = await fetch('collection.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     tracks = await response.json();
     tracks.forEach((track, index) => grid.append(createTrackCard(track, index)));
