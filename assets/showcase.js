@@ -27,6 +27,7 @@ function updateCards() {
     const isActive = index === activeIndex;
     const button = card.querySelector('.play-button');
     card.classList.toggle('active', isActive);
+    card.classList.toggle('playing', isActive && isPlaying);
     button.innerHTML = isActive && isPlaying ? pauseIcon : playIcon;
     button.setAttribute('aria-pressed', String(isActive && isPlaying));
     button.setAttribute('aria-label', `${isActive && isPlaying ? 'Пауза' : 'Воспроизвести'}: ${tracks[index].title} — ${tracks[index].student}`);
@@ -47,12 +48,13 @@ function updateProgress() {
 
 function setMediaMetadata(track) {
   if (!('mediaSession' in navigator) || !('MediaMetadata' in window)) return;
-  navigator.mediaSession.metadata = new MediaMetadata({
+  const metadata = {
     title: track.title,
     artist: track.student,
     album: 'Музыкальная ДНК — Модуль 01',
-    artwork: [{ src: new URL(track.cover, window.location.href).href, type: 'image/png' }],
-  });
+  };
+  if (track.cover) metadata.artwork = [{ src: new URL(track.cover, window.location.href).href }];
+  navigator.mediaSession.metadata = new MediaMetadata(metadata);
 }
 
 async function toggleTrack(index) {
@@ -93,13 +95,19 @@ function seekTrack(index, value) {
 function createTrackCard(track, index) {
   const card = makeElement('article', 'track-card');
   const coverWrap = makeElement('div', 'cover-wrap');
-  const image = makeElement('img', 'cover');
-  image.src = track.cover;
-  image.alt = `Обложка композиции «${track.title}»`;
-  image.loading = index < 4 ? 'eager' : 'lazy';
-  image.width = 512;
-  image.height = 512;
-  coverWrap.append(image);
+  if (track.cover) {
+    const image = makeElement('img', 'cover');
+    image.src = track.cover;
+    image.alt = `Обложка композиции «${track.title}»`;
+    image.loading = index < 4 ? 'eager' : 'lazy';
+    image.width = 512;
+    image.height = 512;
+    coverWrap.append(image);
+  } else {
+    coverWrap.classList.add('cover-missing');
+    coverWrap.setAttribute('role', 'img');
+    coverWrap.setAttribute('aria-label', `Обложка композиции «${track.title}» пока не добавлена`);
+  }
   const controls = makeElement('div', 'track-controls');
   const button = makeElement('button', 'play-button');
   button.type = 'button';
@@ -144,6 +152,7 @@ async function init() {
     tracks = await response.json();
     tracks.forEach((track, index) => grid.append(createTrackCard(track, index)));
     document.querySelector('#track-count').innerHTML = `${tracks.length} ТРЕКОВ<br>ПЕРВОГО МОДУЛЯ`;
+    document.querySelector('#hero-track-count').textContent = `${tracks.length} учеников. ${tracks.length} уникальных музыкальных ДНК.`;
     updateCards();
   } catch (error) {
     status.textContent = 'Не удалось загрузить коллекцию. Обновите страницу, чтобы попробовать снова.';
