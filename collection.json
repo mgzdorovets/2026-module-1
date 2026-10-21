@@ -68,7 +68,8 @@
     "student": "student-017",
     "module": "Модуль 4",
     "title": "Крутой проект",
-    "duration": "1:12"
+    "duration": "1:12",
+    "cover": "covers/student-017-track-01-module-4.png"
   },
   {
     "file": "tracks/student-019-track-01-module-3.mp3",
