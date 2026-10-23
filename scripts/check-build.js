@@ -23,6 +23,13 @@ const requiredFiles = new Set([
   'assets/showcase.css',
   'assets/showcase.js',
   'assets/music-dna/hero-neon-dna.webp',
+  'favicon.ico',
+  'favicon-16x16.png',
+  'favicon-32x32.png',
+  'apple-touch-icon.png',
+  'android-chrome-192x192.png',
+  'android-chrome-512x512.png',
+  'site.webmanifest',
 ]);
 const trackFiles = new Set();
 const coverFiles = new Set();
@@ -47,6 +54,11 @@ for (const file of requiredFiles) {
 
 const imageExtensions = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 const publicImageFiles = [
+  'favicon-16x16.png',
+  'favicon-32x32.png',
+  'apple-touch-icon.png',
+  'android-chrome-192x192.png',
+  'android-chrome-512x512.png',
   ...fs.readdirSync(path.join(root, 'covers')).map((file) => `covers/${file}`),
   ...fs.readdirSync(path.join(root, 'assets/music-dna')).map((file) => `assets/music-dna/${file}`),
 ].filter((file) => imageExtensions.has(path.extname(file).toLowerCase()));
@@ -74,7 +86,7 @@ for (const privateName of ['student_mapping.txt', 'Список.numbers', 'Ск�
   if (fs.existsSync(path.join(root, privateName))) throw new Error(`Приватный материал внутри сайта: ${privateName}`);
 }
 
-for (const file of ['index.html', 'assets/showcase.css', 'assets/showcase.js', 'collection.json']) {
+for (const file of ['index.html', 'assets/showcase.css', 'assets/showcase.js', 'collection.json', 'site.webmanifest']) {
   const source = fs.readFileSync(path.join(root, file), 'utf8');
   if (/file:\/\/|\/Users\/|[A-Za-z]:\\/.test(source)) throw new Error(`Локальный путь найден в ${file}`);
 }
