@@ -4,18 +4,12 @@ const { spawnSync } = require('node:child_process');
 
 const root = path.resolve(__dirname, '..');
 const tracksDir = path.join(root, 'tracks');
-const coversDir = path.join(root, 'covers');
 const outputPath = path.join(root, 'collection.json');
-const coverExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
-
-function urlPath(...segments) {
-  return segments.join('/');
-}
 
 function formatDuration(seconds) {
   if (!Number.isFinite(seconds) || seconds <= 0) return '';
-  const rounded = Math.round(seconds);
-  return `${Math.floor(rounded / 60)}:${String(rounded % 60).padStart(2, '0')}`;
+  const wholeSeconds = Math.floor(seconds);
+  return `${Math.floor(wholeSeconds / 60)}:${String(wholeSeconds % 60).padStart(2, '0')}`;
 }
 
 function readDuration(filePath) {
@@ -30,69 +24,30 @@ function readDuration(filePath) {
     const match = afinfo.stdout.match(/estimated duration:\s*([\d.]+)\s*sec/i);
     if (match) return formatDuration(Number.parseFloat(match[1]));
   }
-
   return '';
 }
 
-function loadExistingCollection() {
-  if (!fs.existsSync(outputPath)) return new Map();
-  try {
-    const collection = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
-    return new Map(collection.map((track) => [track.file, track]));
-  } catch (error) {
-    throw new Error(`Не удалось прочитать collection.json: ${error.message}`);
+if (!fs.existsSync(outputPath)) throw new Error('collection.json отсутствует');
+const collection = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+if (!Array.isArray(collection) || !collection.length) throw new Error('Коллекция пуста');
+
+const listedFiles = new Set();
+for (const track of collection) {
+  if (typeof track.file !== 'string' || !/^tracks\/[a-z0-9._-]+\.mp3$/.test(track.file)) {
+    throw new Error(`Небезопасный путь к аудио: ${String(track.file)}`);
   }
+  const absolutePath = path.join(root, track.file);
+  if (!fs.existsSync(absolutePath)) throw new Error(`Аудиофайл отсутствует: ${track.file}`);
+  listedFiles.add(path.basename(track.file));
+  const duration = readDuration(absolutePath);
+  if (duration) track.duration = duration;
 }
 
-function findCover(baseName) {
-  if (!fs.existsSync(coversDir)) return '';
-  const match = fs.readdirSync(coversDir).find((fileName) => {
-    const extension = path.extname(fileName).toLowerCase();
-    return path.basename(fileName, extension) === baseName && coverExtensions.includes(extension);
-  });
-  return match ? urlPath('covers', match) : '';
+const unlistedFiles = fs.readdirSync(tracksDir)
+  .filter((file) => path.extname(file).toLowerCase() === '.mp3' && !listedFiles.has(file));
+if (unlistedFiles.length) {
+  throw new Error(`Найдены MP3 без карточек: ${unlistedFiles.join(', ')}`);
 }
 
-function trackFromFile(fileName, existingTracks) {
-  const extension = path.extname(fileName);
-  const baseName = path.basename(fileName, extension);
-  const match = baseName.match(/^(student-\d{3})-track-(\d{2})-module-(\d+)$/);
-
-  if (!match) {
-    throw new Error(
-      `Неверное имя файла «${fileName}». Используйте student-XXX-track-YY-module-N.mp3`,
-    );
-  }
-
-  const [, student, , moduleNumber] = match;
-  const file = urlPath('tracks', fileName);
-  const existing = existingTracks.get(file);
-  const cover = findCover(baseName);
-  const track = {
-    file,
-    student,
-    module: `Модуль ${Number(moduleNumber)}`,
-    title: existing?.title || 'Без названия',
-    duration: existing?.duration || readDuration(path.join(tracksDir, fileName)) || '—',
-  };
-
-  if (cover) track.cover = cover;
-  return track;
-}
-
-const files = fs.readdirSync(tracksDir)
-  .filter((fileName) => path.extname(fileName).toLowerCase() === '.mp3')
-  .sort((a, b) => a.localeCompare(b, 'ru'));
-
-const existingTracks = loadExistingCollection();
-const collection = files.map((fileName) => trackFromFile(fileName, existingTracks));
 fs.writeFileSync(outputPath, `${JSON.stringify(collection, null, 2)}\n`, 'utf8');
-
-const missingCovers = collection.filter((track) => !track.cover);
-console.log(`Обновлён collection.json: ${collection.length} треков.`);
-if (missingCovers.length) {
-  console.warn('Нет индивидуальных обложек:');
-  for (const track of missingCovers) {
-    console.warn(`- ${path.basename(track.file, '.mp3')}.[png|jpg|jpeg|gif|svg|webp]`);
-  }
-}
+console.log(`Проверены длительности и безопасные пути: ${collection.length} трека.`);

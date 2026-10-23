@@ -14,6 +14,17 @@ const formatTime = (seconds) => Number.isFinite(seconds)
   ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`
   : '0:00';
 
+function pluralizeRu(count, one, few, many) {
+  const absolute = Math.abs(count) % 100;
+  const lastDigit = absolute % 10;
+  if (absolute >= 11 && absolute <= 14) return many;
+  if (lastDigit === 1) return one;
+  if (lastDigit >= 2 && lastDigit <= 4) return few;
+  return many;
+}
+
+const countPhrase = (count, one, few, many) => `${count} ${pluralizeRu(count, one, few, many)}`;
+
 function makeElement(tag, className, text) {
   const node = document.createElement(tag);
   node.className = className;
@@ -99,7 +110,8 @@ function createTrackCard(track, index) {
     const image = makeElement('img', 'cover');
     image.src = track.cover;
     image.alt = `Обложка композиции «${track.title}»`;
-    image.loading = index < 4 ? 'eager' : 'lazy';
+    image.loading = index < 2 ? 'eager' : 'lazy';
+    image.decoding = 'async';
     image.width = 512;
     image.height = 512;
     coverWrap.append(image);
@@ -151,8 +163,12 @@ async function init() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     tracks = await response.json();
     tracks.forEach((track, index) => grid.append(createTrackCard(track, index)));
-    document.querySelector('#track-count').innerHTML = `${tracks.length} ТРЕКОВ<br>ПЕРВОГО МОДУЛЯ`;
-    document.querySelector('#hero-track-count').textContent = `${tracks.length} учеников. ${tracks.length} уникальных музыкальных ДНК.`;
+    const count = tracks.length;
+    const students = countPhrase(count, 'ученик', 'ученика', 'учеников');
+    const dna = countPhrase(count, 'уникальная музыкальная ДНК', 'уникальные музыкальные ДНК', 'уникальных музыкальных ДНК');
+    const trackCount = countPhrase(count, 'трек', 'трека', 'треков');
+    document.querySelector('#track-count').innerHTML = `${trackCount}<br> первого модуля`;
+    document.querySelector('#hero-track-count').textContent = `${students}. ${dna}.`;
     updateCards();
   } catch (error) {
     status.textContent = 'Не удалось загрузить коллекцию. Обновите страницу, чтобы попробовать снова.';

@@ -1,98 +1,34 @@
 [
   {
-    "file": "tracks/student-001-track-01-module-1.mp3",
-    "student": "student-001",
+    "file": "tracks/ultra33-device.mp3",
+    "student": "ULTRA33 DEVICE",
     "module": "Модуль 1",
-    "title": "без названия",
+    "title": "Код ДНК: 2173369064",
+    "duration": "2:36",
+    "cover": "covers/ultra33-device.jpg"
+  },
+  {
+    "file": "tracks/skyline-888.mp3",
+    "student": "Skyline_888",
+    "module": "Модуль 1",
+    "title": "Код ДНК: 1827441145",
+    "duration": "1:03",
+    "cover": "covers/placeholder.webp"
+  },
+  {
+    "file": "tracks/skvivli.mp3",
+    "student": "Сквивли",
+    "module": "Модуль 1",
+    "title": "Код ДНК: 4088321497",
     "duration": "1:38",
-    "cover": "covers/student-001-track-01-module-1.png"
+    "cover": "covers/placeholder.webp"
   },
   {
-    "file": "tracks/student-002-track-01-module-3.mp3",
-    "student": "student-002",
-    "module": "Модуль 3",
-    "title": "Лето",
-    "duration": "1:13",
-    "cover": "covers/student-002-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-008-track-01-module-5.mp3",
-    "student": "student-008",
-    "module": "Модуль 5",
-    "title": "Вайб",
-    "duration": "1:39",
-    "cover": "covers/student-008-track-01-module-5.png"
-  },
-  {
-    "file": "tracks/student-009-track-01-module-3.mp3",
-    "student": "student-009",
-    "module": "Модуль 3",
-    "title": "Unknown Track",
-    "duration": "1:19",
-    "cover": "covers/student-009-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-010-track-01-module-3.mp3",
-    "student": "student-010",
-    "module": "Модуль 3",
-    "title": "Осколки ночи",
-    "duration": "1:43",
-    "cover": "covers/student-010-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-011-track-01-module-3.mp3",
-    "student": "student-011",
-    "module": "Модуль 3",
-    "title": "Unknown Track",
-    "duration": "1:43",
-    "cover": "covers/student-011-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-012-track-01-module-3.mp3",
-    "student": "student-012",
-    "module": "Модуль 3",
-    "title": "Feeling",
-    "duration": "0:56",
-    "cover": "covers/student-012-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-015-track-01-module-3.mp3",
-    "student": "student-015",
-    "module": "Модуль 3",
-    "title": "Караси с маракасами",
-    "duration": "1:23",
-    "cover": "covers/student-015-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-017-track-01-module-4.mp3",
-    "student": "student-017",
-    "module": "Модуль 4",
-    "title": "Крутой проект",
-    "duration": "1:12",
-    "cover": "covers/student-017-track-01-module-4.png"
-  },
-  {
-    "file": "tracks/student-019-track-01-module-3.mp3",
-    "student": "student-019",
-    "module": "Модуль 3",
-    "title": "Скачка за ветром",
-    "duration": "1:17",
-    "cover": "covers/student-019-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-023-track-01-module-3.mp3",
-    "student": "student-023",
-    "module": "Модуль 3",
-    "title": "Звуки с луны",
-    "duration": "1:46",
-    "cover": "covers/student-023-track-01-module-3.png"
-  },
-  {
-    "file": "tracks/student-024-track-01-module-3.mp3",
-    "student": "student-024",
-    "module": "Модуль 3",
-    "title": "Star way",
-    "duration": "1:13",
-    "cover": "covers/student-024-track-01-module-3.png"
+    "file": "tracks/leehan.mp3",
+    "student": "!leehan$",
+    "module": "Модуль 1",
+    "title": "Код ДНК: 3820566516",
+    "duration": "0:52",
+    "cover": "covers/placeholder.webp"
   }
 ]
