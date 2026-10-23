@@ -8,6 +8,14 @@
     "cover": "covers/sf.jpg"
   },
   {
+    "file": "tracks/fezeru.mp3",
+    "student": "FEZERU",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 3182750858",
+    "duration": "2:07",
+    "cover": "covers/placeholder.webp"
+  },
+  {
     "file": "tracks/ultra33-device.mp3",
     "student": "ULTRA33 DEVICE",
     "module": "Модуль 1",
