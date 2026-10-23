@@ -33,15 +33,24 @@ const requiredFiles = new Set([
 ]);
 const trackFiles = new Set();
 const coverFiles = new Set();
+const students = new Set();
+const dnaCodes = new Set();
 
 for (const track of tracks) {
-  for (const key of ['student', 'title', 'module', 'file', 'duration', 'cover']) {
+  for (const key of ['student', 'dna', 'module', 'file', 'duration', 'cover']) {
     if (typeof track[key] !== 'string' || !track[key]) throw new Error(`Отсутствует ${key}`);
   }
-  if (!/^Код ДНК: \d+$/.test(track.title)) throw new Error(`Некорректный формат кода ДНК: ${track.title}`);
+  if ('trackTitle' in track && (typeof track.trackTitle !== 'string' || !track.trackTitle.trim())) {
+    throw new Error(`Некорректное название трека: ${track.student}`);
+  }
+  if (!/^Код ДНК: \d+$/.test(track.dna)) throw new Error(`Некорректный формат кода ДНК: ${track.dna}`);
   if (!track.file.endsWith('.mp3')) throw new Error(`Ожидался MP3: ${track.file}`);
   if (trackFiles.has(track.file)) throw new Error(`Аудиофайл подключён дважды: ${track.file}`);
+  if (students.has(track.student)) throw new Error(`Никнейм подключён дважды: ${track.student}`);
+  if (dnaCodes.has(track.dna)) throw new Error(`Код ДНК подключён дважды: ${track.dna}`);
   trackFiles.add(track.file);
+  students.add(track.student);
+  dnaCodes.add(track.dna);
   coverFiles.add(track.cover);
   requiredFiles.add(track.file);
   requiredFiles.add(track.cover);

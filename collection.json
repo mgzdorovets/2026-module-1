@@ -1,9 +1,17 @@
 [
   {
+    "file": "tracks/sf.mp3",
+    "student": "sf",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 2416393445",
+    "duration": "1:10",
+    "cover": "covers/sf.jpg"
+  },
+  {
     "file": "tracks/ultra33-device.mp3",
     "student": "ULTRA33 DEVICE",
     "module": "Модуль 1",
-    "title": "Код ДНК: 2173369064",
+    "dna": "Код ДНК: 2173369064",
     "duration": "2:36",
     "cover": "covers/ultra33-device.jpg"
   },
@@ -11,24 +19,75 @@
     "file": "tracks/skyline-888.mp3",
     "student": "Skyline_888",
     "module": "Модуль 1",
-    "title": "Код ДНК: 1827441145",
+    "dna": "Код ДНК: 1827441145",
     "duration": "1:03",
-    "cover": "covers/placeholder.webp"
+    "cover": "covers/skyline-888.jpg"
   },
   {
     "file": "tracks/skvivli.mp3",
     "student": "Сквивли",
     "module": "Модуль 1",
-    "title": "Код ДНК: 4088321497",
+    "dna": "Код ДНК: 4088321497",
     "duration": "1:38",
-    "cover": "covers/placeholder.webp"
+    "cover": "covers/skvivli.jpg"
+  },
+  {
+    "file": "tracks/deyzi.mp3",
+    "student": "DейZи",
+    "trackTitle": "Hope",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 3133074598",
+    "duration": "2:42",
+    "cover": "covers/deyzi.webp"
+  },
+  {
+    "file": "tracks/ai-kei.mp3",
+    "student": "Ai_Kei",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 2878369761",
+    "duration": "2:04",
+    "cover": "covers/ai-kei.jpg"
   },
   {
     "file": "tracks/leehan.mp3",
     "student": "!leehan$",
     "module": "Модуль 1",
-    "title": "Код ДНК: 3820566516",
+    "dna": "Код ДНК: 3820566516",
     "duration": "0:52",
     "cover": "covers/placeholder.webp"
+  },
+  {
+    "file": "tracks/vini.mp3",
+    "student": "Vini",
+    "trackTitle": "Радость (юность 2026)",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 3498351598",
+    "duration": "1:55",
+    "cover": "covers/vini.webp"
+  },
+  {
+    "file": "tracks/credit.mp3",
+    "student": "credit",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 4851810178",
+    "duration": "1:46",
+    "cover": "covers/placeholder.webp"
+  },
+  {
+    "file": "tracks/yuki.mp3",
+    "student": "Юки",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 1170316217",
+    "duration": "2:47",
+    "cover": "covers/yuki.jpg"
+  },
+  {
+    "file": "tracks/v-fox.mp3",
+    "student": "V/Fox",
+    "trackTitle": "⚝Star Gods⚝",
+    "module": "Модуль 1",
+    "dna": "Код ДНК: 2056367102",
+    "duration": "3:54",
+    "cover": "covers/v-fox.webp"
   }
 ]

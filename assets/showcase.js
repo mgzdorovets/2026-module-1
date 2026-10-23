@@ -10,6 +10,8 @@ let tracks = [];
 let activeIndex = -1;
 let playRequest = 0;
 
+const getTrackLabel = (track) => track.trackTitle || track.dna;
+
 const formatTime = (seconds) => Number.isFinite(seconds)
   ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`
   : '0:00';
@@ -41,7 +43,7 @@ function updateCards() {
     card.classList.toggle('playing', isActive && isPlaying);
     button.innerHTML = isActive && isPlaying ? pauseIcon : playIcon;
     button.setAttribute('aria-pressed', String(isActive && isPlaying));
-    button.setAttribute('aria-label', `${isActive && isPlaying ? 'Пауза' : 'Воспроизвести'}: ${tracks[index].title} — ${tracks[index].student}`);
+    button.setAttribute('aria-label', `${isActive && isPlaying ? 'Пауза' : 'Воспроизвести'}: ${getTrackLabel(tracks[index])} — ${tracks[index].student}`);
   });
 }
 
@@ -60,7 +62,7 @@ function updateProgress() {
 function setMediaMetadata(track) {
   if (!('mediaSession' in navigator) || !('MediaMetadata' in window)) return;
   const metadata = {
-    title: track.title,
+    title: getTrackLabel(track),
     artist: track.student,
     album: 'Музыкальная ДНК — Модуль 01',
   };
@@ -109,7 +111,7 @@ function createTrackCard(track, index) {
   if (track.cover) {
     const image = makeElement('img', 'cover');
     image.src = track.cover;
-    image.alt = `Обложка композиции «${track.title}»`;
+    image.alt = `Обложка композиции «${getTrackLabel(track)}»`;
     image.loading = index < 2 ? 'eager' : 'lazy';
     image.decoding = 'async';
     image.width = 512;
@@ -118,7 +120,7 @@ function createTrackCard(track, index) {
   } else {
     coverWrap.classList.add('cover-missing');
     coverWrap.setAttribute('role', 'img');
-    coverWrap.setAttribute('aria-label', `Обложка композиции «${track.title}» пока не добавлена`);
+    coverWrap.setAttribute('aria-label', `Обложка композиции «${getTrackLabel(track)}» пока не добавлена`);
   }
   const controls = makeElement('div', 'track-controls');
   const button = makeElement('button', 'play-button');
@@ -131,12 +133,14 @@ function createTrackCard(track, index) {
   progress.max = '100';
   progress.step = '.1';
   progress.value = '0';
-  progress.setAttribute('aria-label', `Позиция: ${track.title}`);
+  progress.setAttribute('aria-label', `Позиция: ${getTrackLabel(track)}`);
   progress.addEventListener('input', (event) => seekTrack(index, event.target.value));
   const duration = makeElement('span', 'duration', track.duration || '0:00');
   controls.append(button, progress, duration);
   const info = makeElement('div', 'track-info');
-  info.append(makeElement('h3', '', track.student), makeElement('p', '', track.title));
+  info.append(makeElement('h3', '', track.student));
+  if (track.trackTitle) info.append(makeElement('p', 'track-title', track.trackTitle));
+  info.append(makeElement('p', 'dna-code', track.dna));
   card.append(coverWrap, controls, info);
   return card;
 }
