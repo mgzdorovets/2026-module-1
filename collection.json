@@ -58,7 +58,7 @@
   },
   {
     "file": "tracks/leehan.mp3",
-    "student": "!leehan$",
+    "student": "! Leehan$",
     "module": "Модуль 1",
     "dna": "Код ДНК: 3820566516",
     "duration": "0:52",
@@ -75,11 +75,11 @@
   },
   {
     "file": "tracks/credit.mp3",
-    "student": "credit",
+    "student": "Credit",
     "module": "Модуль 1",
     "dna": "Код ДНК: 4851810178",
     "duration": "1:46",
-    "cover": "covers/placeholder.webp"
+    "cover": "covers/credit.png"
   },
   {
     "file": "tracks/yuki.mp3",
